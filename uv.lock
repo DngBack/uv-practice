@@ -5,6 +5,7 @@ requires-python = ">=3.13"
 [manifest]
 members = [
     "base",
+    "client",
     "uv-practice",
 ]
 
@@ -27,6 +28,17 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [{ name = "pydantic", specifier = ">=2.11.7" }]
+
+[[package]]
+name = "client"
+version = "0.1.0"
+source = { editable = "services/client" }
+dependencies = [
+    { name = "base" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "base", editable = "libs/base" }]
 
 [[package]]
 name = "pydantic"

@@ -10,4 +10,6 @@ dependencies = []
 members = [
     "libs/base",
     "base",
+    "services/clinet",
+    "services/client",
 ]
